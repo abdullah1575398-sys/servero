@@ -73,7 +73,7 @@
         "pretty-quick": "^4.2.2",
         "ts-node": "^10.9.2",
         "typescript": "^6.0.3",
-        "typescript-json-schema": "^0.68.0"
+        "typescript-json-schema": "0.67.4"
     },
     "dependencies": {
         "@spacebarchat/pion-webrtc": "^0.0.4",
@@ -83,7 +83,7 @@
         "amqplib": "^2.0.1",
         "badge-maker": "^6.0.0",
         "bcrypt": "^6.0.0",
-        "body-parser": "^2.3.0",
+        "body-parser": "2.2.2",
         "chalk": "^6.0.0",
         "cheerio": "^1.2.0",
         "cookie-parser": "^1.4.7",
