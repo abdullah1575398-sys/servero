@@ -46,7 +46,8 @@ if (!process.env.DATABASE && !isHeadlessProcess) {
 }
 
 const dbConnectionString = process.env.DATABASE!;
-export const DatabaseType = isHeadlessProcess ? "postgres" : dbConnectionString.split(":")[0]?.replace("+srv", "");
+// TypeORM only recognises "postgres", but connection strings may use the "postgresql" scheme
+export const DatabaseType = isHeadlessProcess ? "postgres" : dbConnectionString.split(":")[0]?.replace("+srv", "").replace(/^postgresql$/, "postgres");
 const applyMigrations = process.env.APPLY_DB_MIGRATIONS !== "false";
 const MIGRATIONLOCK = 1;
 export const DataSourceOptions = isHeadlessProcess
